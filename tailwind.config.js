@@ -1,18 +1,22 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    fontFamily: {
+      sans: ["'DM Sans'", ...defaultTheme.fontFamily],
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        main: "#E53D00",
+        grey: "#7a7d9c",
+        cosmos: "#420217",
+        dark: "#040f16",
+        error: "#e3170a",
+        success: "#5c8001",
+        "main-hover": "#C23A09",
       },
     },
   },
   plugins: [],
-}
+};
