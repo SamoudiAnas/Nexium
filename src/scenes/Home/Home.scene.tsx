@@ -123,37 +123,42 @@ const LandingPage = () => {
           <Image
             src="/assets/imgs/Company logo.png"
             alt="descript logo"
-            width={1000}
-            height={1000}
+            width={300}
+            height={300}
             fetchPriority="low"
+            className="w-32"
           />
           <Image
             src="/assets/imgs/Company logo-1.png"
             alt="shopify logo"
-            width={1000}
-            height={1000}
+            width={300}
+            height={300}
             fetchPriority="low"
+            className="w-32"
           />
           <Image
             src="/assets/imgs/Company logo-2.png"
             alt="slack logo"
-            width={1000}
-            height={1000}
+            width={300}
+            height={300}
             fetchPriority="low"
+            className="w-32"
           />
           <Image
             src="/assets/imgs/Company logo-3.png"
             alt="elastic logo"
-            width={1000}
-            height={1000}
+            width={300}
+            height={300}
             fetchPriority="low"
+            className="w-32"
           />
           <Image
             src="/assets/imgs/Company logo-4.png"
             alt="loom logo"
-            width={1000}
-            height={1000}
+            width={300}
+            height={300}
             fetchPriority="low"
+            className="w-32"
           />
         </div>
       </section>
