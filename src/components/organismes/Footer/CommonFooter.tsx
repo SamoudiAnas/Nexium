@@ -21,6 +21,7 @@ const CommonFooter = () => {
             <Link href="/pricing">Pricing</Link>
             <Link href="/">About</Link>
             <Link href="/">Testimonials</Link>
+            <Link href="/contact">Contact</Link>
           </div>
         </div>
         <div className="flex justify-between items-center py-4">

@@ -20,12 +20,8 @@ const Header = () => {
 
         <div className="flex gap-6">
           <Link href="/login">
-            <span className="text-white">
-              <Link href="/login">
-                <span className="hover:underline hover:underline-offset-2">
-                  Login
-                </span>
-              </Link>
+            <span className="text-white hover:underline hover:underline-offset-2">
+              Login
             </span>
           </Link>
           <Link href="/contact">

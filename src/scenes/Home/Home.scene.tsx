@@ -1,5 +1,5 @@
 import { Button } from "@/components/atoms/Button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 const LandingPage = () => {
   return (
@@ -138,11 +138,11 @@ const LandingPage = () => {
               <div className="flex justify-end gap-2">
                 <button>
                   <span className="sr-only">View previous testimony</span>
-                  <ArrowLeft className="w-14 h-14 rounded-full border border-main p-3 text-main hover:cursor-pointer hover:bg-main hover:text-white" />
+                  <ArrowLeftIcon className="w-14 h-14 rounded-full border border-main p-3 text-main hover:cursor-pointer hover:bg-main hover:text-white" />
                 </button>
                 <button>
                   <span className="sr-only">View next testimony</span>
-                  {/* <ArrowRight className="w-14 h-14 rounded-full border border-main p-3 text-main hover:cursor-pointer hover:bg-main hover:text-white" /> */}
+                  <ArrowRightIcon className="w-14 h-14 rounded-full border border-main p-3 text-main hover:cursor-pointer hover:bg-main hover:text-white" />
                 </button>
               </div>
             </div>
