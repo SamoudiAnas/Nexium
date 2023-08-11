@@ -1,66 +1,73 @@
 import { Button } from "@/components/atoms/Button";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import PricingTable from "./components/PricingTable";
+import Image from "next/image";
 
 const LandingPage = () => {
   return (
     <>
-      <section id="hero" className="pt-28 max-w-5xl mx-auto">
-        <h1 className="text-center tex-deeppurple lg:text-7xl">
-          Revolutionizing the Future with Cutting-Edge Technology
-        </h1>
-        <p className="text-grey mt-8 text-center">
-          Empowering Innovation for a Digital Tomorrow
-        </p>
+      <div className="relative before:absolute before:inset-0 before:z-10 before:-translate-y-28 before:bg-contain before:bg-no-repeat before:bg-[url('/assets/svg/hashes.svg')] before:opacity-50">
+        <section id="hero" className="pt-28 max-w-5xl mx-auto relative z-20">
+          <h1 className="text-center tex-deeppurple lg:text-7xl">
+            Revolutionizing the Future with Cutting-Edge Technology
+          </h1>
+          <p className="text-grey mt-8 text-center">
+            Empowering Innovation for a Digital Tomorrow
+          </p>
 
-        <div className="flex justify-center gap-4 my-8">
-          <Button
-            className="bg-dark text-white text-base rounded-full px-8 hover:bg-dark/90"
-            size="lg"
-          >
-            Demo
-          </Button>
-          <Button
-            className="bg-main text-white text-base rounded-full px-8"
-            size="lg"
-          >
-            Contact Us
-          </Button>
-        </div>
-
-        <img
-          src="/assets/imgs/dashboard_overview.png"
-          alt="Dashboard overview"
-        />
-
-        <div className="grid md:grid-cols-3 gap-4 md:gap-0 bg-gray-50 rounded-2xl p-4 border border-main/20 mt-12 mb-24">
-          <div>
-            <h2 className="text-5xl font-semibold text-main text-center">
-              50K
-            </h2>
-            <p className="text-2xl font-semibold text-dark text-center">
-              New users per month
-            </p>
+          <div className="flex justify-center gap-4 my-8">
+            <Button
+              className="bg-dark text-white text-base rounded-full px-8 hover:bg-dark/90"
+              size="lg"
+            >
+              Demo
+            </Button>
+            <Button
+              className="bg-main text-white text-base rounded-full px-8"
+              size="lg"
+            >
+              Contact Us
+            </Button>
           </div>
 
-          <div className="md:border-x md:border-main/20">
-            <h2 className="text-5xl font-semibold text-main text-center">
-              150K
-            </h2>
-            <p className="text-2xl font-semibold text-dark text-center">
-              Active Users
-            </p>
-          </div>
+          <Image
+            src="/assets/imgs/dashboard_overview.png"
+            alt="Dashboard overview"
+            width={1000}
+            height={1000}
+            fetchPriority="high"
+          />
 
-          <div>
-            <h2 className="text-5xl font-semibold text-main text-center">
-              98%
-            </h2>
-            <p className="text-2xl font-semibold text-dark text-center">
-              Satisfied Customers
-            </p>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-0 bg-gray-50 rounded-2xl p-4 border border-main/20 mt-12 mb-24">
+            <div>
+              <h2 className="text-5xl font-semibold text-main text-center">
+                50K
+              </h2>
+              <p className="text-2xl font-semibold text-dark text-center">
+                New users per month
+              </p>
+            </div>
+
+            <div className="md:border-x md:border-main/20">
+              <h2 className="text-5xl font-semibold text-main text-center">
+                150K
+              </h2>
+              <p className="text-2xl font-semibold text-dark text-center">
+                Active Users
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-5xl font-semibold text-main text-center">
+                98%
+              </h2>
+              <p className="text-2xl font-semibold text-dark text-center">
+                Satisfied Customers
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section id="features" className="bg-gray-100 py-16">
         <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 items-center gap-8 md:gap-16">
@@ -92,9 +99,12 @@ const LandingPage = () => {
               </Button>
             </div>
           </div>
-          <img
+          <Image
             src="/assets/imgs/dashboard_overview.png"
             alt="Dashboard overview"
+            width={1000}
+            height={1000}
+            fetchPriority="low"
           />
         </div>
       </section>
@@ -110,11 +120,41 @@ const LandingPage = () => {
         </p>
 
         <div className="flex justify-center flex-wrap gap-4 md:gap-8 xl:gap-24">
-          <img src="/assets/imgs/Company logo.png" alt="descript logo" />
-          <img src="/assets/imgs/Company logo-1.png" alt="shopify logo" />
-          <img src="/assets/imgs/Company logo-2.png" alt="slack logo" />
-          <img src="/assets/imgs/Company logo-3.png" alt="elastic logo" />
-          <img src="/assets/imgs/Company logo-4.png" alt="loom logo" />
+          <Image
+            src="/assets/imgs/Company logo.png"
+            alt="descript logo"
+            width={1000}
+            height={1000}
+            fetchPriority="low"
+          />
+          <Image
+            src="/assets/imgs/Company logo-1.png"
+            alt="shopify logo"
+            width={1000}
+            height={1000}
+            fetchPriority="low"
+          />
+          <Image
+            src="/assets/imgs/Company logo-2.png"
+            alt="slack logo"
+            width={1000}
+            height={1000}
+            fetchPriority="low"
+          />
+          <Image
+            src="/assets/imgs/Company logo-3.png"
+            alt="elastic logo"
+            width={1000}
+            height={1000}
+            fetchPriority="low"
+          />
+          <Image
+            src="/assets/imgs/Company logo-4.png"
+            alt="loom logo"
+            width={1000}
+            height={1000}
+            fetchPriority="low"
+          />
         </div>
       </section>
 
@@ -123,7 +163,13 @@ const LandingPage = () => {
           <h1 className="text-4xl text-center mb-20">1M+ Global Customers</h1>
 
           <div className="grid md:grid-cols-2 items-center md:gap-8">
-            <img src="/assets/imgs/dashboard_overview.png" alt="" />
+            <Image
+              src="/assets/imgs/dashboard_overview.png"
+              alt="dashboard overview"
+              width={1000}
+              height={1000}
+              fetchPriority="low"
+            />
             <div>
               <p className="text-grey mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
@@ -149,6 +195,8 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      <PricingTable />
     </>
   );
 };

@@ -49,7 +49,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className={clsx(
               "default-input peer block rounded w-full border-2 border-gray-400 shadow-sm sm:text-sm p-4 h-12",
               "disabled:cursor-not-allowed disabled:opacity-50",
-              "focus:border-main focus:outline-none",
+              "focus:border-blue-500 focus:outline-none",
               { "!pl-10": withIconBefore },
               { "border-error focus:border-error": hasError }
             )}
@@ -61,10 +61,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             htmlFor={`${props.id}-input`}
             className={cn(
               clsx(
-                "absolute top-1/2 -translate-y-1/2 left-4",
+                "absolute top-1/2 -translate-y-1/2  left-4",
                 "block transition-all duration-300 ease-out text-gray-500 px-2",
-                "pointer-events-none peer-focus:text-main peer-focus:-translate-y-9 peer-focus:bg-white",
-                { "-translate-y-9 bg-white": isValid },
+                "pointer-events-none peer-focus:text-blue-500 peer-focus:-translate-y-9 peer-focus:bg-white",
+                {
+                  " -translate-y-9 bg-white": isValid || hasError,
+                },
                 { "text-error peer-focus:text-error": hasError },
                 { "left-10": withIconBefore }
               ),
@@ -75,7 +77,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           </label>
           <div className="absolute top-1/2 right-4 -translate-y-1/2 flex gap-2">
             {!withIconAfter && isValid && (
-              <CheckIcon className="text-green-600" />
+              <CheckIcon className="text-green-600 w-5 h-6" />
             )}
             {withIconAfter && IconAfter && IconAfter}
           </div>

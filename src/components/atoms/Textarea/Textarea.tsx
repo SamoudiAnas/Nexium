@@ -9,6 +9,7 @@ export interface TextareaProps
   containerClassNames?: string;
   labelClassName?: string;
   hasError?: boolean;
+  isValid?: boolean;
 }
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
@@ -16,6 +17,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     {
       className,
       label,
+      isValid,
       hasError,
       labelClassName,
       containerClassNames,
@@ -32,7 +34,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             className={clsx(
               "default-input peer block rounded w-full border-2 border-gray-400 shadow-sm sm:text-sm p-4 ",
               "disabled:cursor-not-allowed disabled:opacity-50",
-              "focus:border-main focus:outline-none",
+              "focus:border-blue-500 focus:outline-none",
 
               { "border-error focus:border-error": hasError }
             )}
@@ -46,7 +48,10 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
               clsx(
                 "absolute top-6 -translate-y-1/2 left-4",
                 "block transition-all duration-300 ease-out text-gray-500 px-2",
-                "pointer-events-none peer-focus:text-main peer-focus:-translate-y-9 peer-focus:bg-white",
+                "pointer-events-none peer-focus:text-blue-500  peer-focus:-translate-y-9 peer-focus:bg-white",
+                {
+                  " -translate-y-9 bg-white": isValid || hasError,
+                },
                 { "text-error peer-focus:text-error": hasError }
               ),
               labelClassName
