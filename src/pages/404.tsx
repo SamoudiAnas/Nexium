@@ -2,6 +2,7 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import EmptyState from "~/assets/svg/Empty State.svg";
 
 import { Button } from "@/components/atoms/Button";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -10,10 +11,12 @@ export default function NotFound() {
 
       <h3 className="text-2xl text-center">Oops! Nothing to see here</h3>
 
-      <Button className="flex items-center gap-2">
-        <ArrowLeftIcon />
-        <span>Back to Home</span>
-      </Button>
+      <Link href="/">
+        <Button className="flex items-center gap-2 rounded-full">
+          <ArrowLeftIcon />
+          <span>Back to Home</span>
+        </Button>
+      </Link>
     </div>
   );
 }
