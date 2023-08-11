@@ -15,20 +15,25 @@ const linkVariants = cva(
         white: "text-white after:bg-white",
         dark: "text-dark after:bg-dark",
       },
+      active: {
+        true: "after:scale-x-100",
+      },
     },
     defaultVariants: {
       variant: "default",
+      active: false,
     },
   }
 );
 
 export const NavLink = ({
   variant = "default",
+  active,
   children,
   ...props
 }: NavLinkProps) => {
   return (
-    <Link className={linkVariants({ variant })} {...props}>
+    <Link className={linkVariants({ variant, active })} {...props}>
       {children}
     </Link>
   );
