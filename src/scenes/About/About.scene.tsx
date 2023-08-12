@@ -1,4 +1,3 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import Integrity from "~/assets/svg/integrity.svg";
 import Innovation from "~/assets/svg/innovation.svg";
 import Collaboration from "~/assets/svg/collaboration.svg";
@@ -23,8 +22,9 @@ const About = () => {
             At FutureSphere our mission is to empower individuals and businesses
             through innovative technology solutions that enrich lives, foster
             growth, and drive positive change. We are dedicated to pushing the
-            boundaries of what's possible, creating transformative experiences
-            that make a lasting impact in a rapidly evolving digital landscape.
+            boundaries of what&apos;s possible, creating transformative
+            experiences that make a lasting impact in a rapidly evolving digital
+            landscape.
           </p>
 
           <div className="flex justify-center gap-4 my-8">
@@ -64,9 +64,9 @@ const About = () => {
               <br />
               During a train ride, a moment of inspiration struck Vasily. He
               wished for a convenient study tool on his phone to help him
-              prepare for the LSAT. However, such an app didn't exist at the
-              time. Determined to overcome this hurdle, Vasily took matters into
-              his own hands and developed one of the earliest and most
+              prepare for the LSAT. However, such an app didn&apos;t exist at
+              the time. Determined to overcome this hurdle, Vasily took matters
+              into his own hands and developed one of the earliest and most
               comprehensive LSAT apps on the market. The app quickly gained
               popularity, becoming the #1 paid LSAT app for over a year.
             </p>
