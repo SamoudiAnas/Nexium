@@ -19,45 +19,42 @@ export default function Contact() {
         </p>
       </section>
 
-      <section className="max-w-screen-lg mx-auto grid grid-cols-[3fr_1fr] gap-12">
+      <section className="max-w-screen-lg mx-auto grid grid-cols-[3fr_1fr] gap-12 mb-16">
         <div>
           <ContactForm />
+          <div className="grid md:grid-cols-3 gap-4 md:gap-0 max-w-screen-lg mx-auto rounded-2xl p-4 border border-main/20 mt-8">
+            <div>
+              <Suitecase className="mx-auto w-16 mb-4" />
+              <h2 className="font-semibold text-dark text-center">
+                Sales and Business
+              </h2>
+              <p className="text-sm text-grey text-center">
+                contact@samoudianas.dev
+              </p>
+            </div>
+
+            <div className="md:border-x md:border-main/20">
+              <Partner className="mx-auto w-16 mb-4" />
+              <h2 className="font-semibold text-dark text-center">Partners</h2>
+              <p className="text-sm text-grey text-center">
+                partners1234@gmail.com
+              </p>
+            </div>
+
+            <div>
+              <CustomerSupport className="mx-auto w-16 mb-4" />
+              <h2 className="font-semibold text-dark text-center">
+                Customer Support
+              </h2>
+              <p className="text-sm text-grey text-center">support@gmail.com</p>
+            </div>
+          </div>
         </div>
 
         <GradientBox />
       </section>
 
       <FAQs />
-
-      <div className="grid md:grid-cols-3 gap-4 md:gap-0 max-w-screen-lg mx-auto rounded-2xl p-4 border border-main/20 my-16">
-        <div>
-          <Suitecase className="mx-auto w-16 mb-4" />
-          <h2 className="text-lg font-semibold text-dark text-center">
-            Sales and Business
-          </h2>
-          <p className="text-base text-grey text-center">
-            contact@samoudianas.dev
-          </p>
-        </div>
-
-        <div className="md:border-x md:border-main/20">
-          <Partner className="mx-auto w-16 mb-4" />
-          <h2 className="text-lg font-semibold text-dark text-center">
-            Partners
-          </h2>
-          <p className="text-base text-grey text-center">
-            partners1234@gmail.com
-          </p>
-        </div>
-
-        <div>
-          <CustomerSupport className="mx-auto w-16 mb-4" />
-          <h2 className="text-lg font-semibold text-dark text-center">
-            Customer Support
-          </h2>
-          <p className="text-base text-grey text-center">support@gmail.com</p>
-        </div>
-      </div>
     </main>
   );
 }

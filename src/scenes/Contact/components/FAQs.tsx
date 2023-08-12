@@ -24,7 +24,7 @@ export default function FAQs() {
                 key={idx}
                 className="border border-gray-200 rounded-md bg-white"
               >
-                <h2 className="text-main font-semibold py-4 px-6 border-b border-gray-200">
+                <h2 className="text-dark text-lg font-semibold py-4 px-6 border-b border-gray-200">
                   What is included in the startup website template?
                 </h2>
                 <p className="text-grey py-4 px-6  pr-8 pb-8">

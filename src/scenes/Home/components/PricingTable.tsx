@@ -1,3 +1,5 @@
+import TooltipIcon from "~/assets/svg/tooltip-icon.svg";
+
 import { Button } from "@/components/atoms/Button";
 import {
   Tooltip,
@@ -6,7 +8,6 @@ import {
   TooltipTrigger,
 } from "@/components/molecules/Tooltip";
 import { CheckIcon, Cross2Icon } from "@radix-ui/react-icons";
-import React from "react";
 
 export default function PricingTable() {
   return (
@@ -67,7 +68,7 @@ export default function PricingTable() {
             </div>
           </div>
 
-          <div className="rounded-lg px-4 md:px-8 py-6 border border-gray-100 flex flex-col gap-6 items-center relative bg-gray-50">
+          <div className="rounded-lg px-4 md:px-8 py-6 border border-main/60 flex flex-col gap-6 items-center relative bg-gray-50">
             <span className="absolute left-1/2 -translate-y-1/2 top-0 -translate-x-1/2 bg-orange-100 text-main border border-main/70 py-1 px-4 rounded-full text-sm">
               Recommended
             </span>
@@ -177,9 +178,12 @@ const Tooltips = () => {
         <Tooltip>
           <TooltipTrigger asChild>
             <div className="py-2 px-3 rounded bg-main/10 flex items-center justify-between w-full mb-3 hover:cursor-pointer">
-              <p className="text-xs md:text-sm text-main">
-                Responsive Website Design
-              </p>
+              <div className="flex items-center gap-1">
+                <p className="text-xs md:text-sm text-main">
+                  Responsive Website Design
+                </p>
+                <TooltipIcon className="w-4 h-4" />
+              </div>
               <CheckIcon className="w-4 h-4 rounded-full bg-main text-white flex-shrink-0" />
             </div>
           </TooltipTrigger>
@@ -202,9 +206,12 @@ const Tooltips = () => {
         <Tooltip>
           <TooltipTrigger asChild>
             <div className="py-2 px-3 rounded bg-main/10 flex items-center justify-between w-full mb-3 hover:cursor-pointer">
-              <p className="text-xs md:text-sm text-main">
-                Basic SEO Optimization
-              </p>
+              <div className="flex items-center gap-1">
+                <p className="text-xs md:text-sm text-main">
+                  Basic SEO Optimization
+                </p>
+                <TooltipIcon className="w-4 h-4" />
+              </div>
               <CheckIcon className="w-4 h-4 rounded-full bg-main text-white flex-shrink-0" />
             </div>
           </TooltipTrigger>
@@ -227,9 +234,12 @@ const Tooltips = () => {
         <Tooltip>
           <TooltipTrigger asChild>
             <div className="py-2 px-3 rounded bg-main/10 flex items-center justify-between w-full mb-3 hover:cursor-pointer">
-              <p className="text-xs md:text-sm text-main">
-                24/7 Customer Support
-              </p>
+              <div className="flex items-center gap-1">
+                <p className="text-xs md:text-sm text-main">
+                  24/7 Customer Support
+                </p>
+                <TooltipIcon className="w-4 h-4" />
+              </div>
               <CheckIcon className="w-4 h-4 rounded-full bg-main text-white flex-shrink-0" />
             </div>
           </TooltipTrigger>

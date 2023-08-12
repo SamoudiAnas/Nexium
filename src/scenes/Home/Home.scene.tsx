@@ -2,6 +2,7 @@ import { Button } from "@/components/atoms/Button";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import PricingTable from "./components/PricingTable";
 import Image from "next/image";
+import Testimonials from "./components/Testimonials";
 
 const LandingPage = () => {
   return (
@@ -16,17 +17,11 @@ const LandingPage = () => {
           </p>
 
           <div className="flex justify-center gap-4 my-8">
-            <Button
-              className="bg-dark text-white text-base rounded-full px-8 hover:bg-dark/90"
-              size="lg"
-            >
-              Demo
-            </Button>
-            <Button
-              className="bg-main text-white text-base rounded-full px-8"
-              size="lg"
-            >
+            <Button className="rounded-full px-8" size="lg">
               Contact Us
+            </Button>
+            <Button variant="outline" className="rounded-full px-8" size="lg">
+              Demo
             </Button>
           </div>
 
@@ -109,6 +104,10 @@ const LandingPage = () => {
         </div>
       </section>
 
+      <PricingTable />
+
+      <Testimonials />
+
       <section id="trusted-by" className="max-w-5xl mx-auto py-28">
         <h1 className="text-4xl text-center mb-5">
           Trusted by Industry Leaders
@@ -162,46 +161,6 @@ const LandingPage = () => {
           />
         </div>
       </section>
-
-      <section id="testimonials" className="bg-gray-50 py-20">
-        <div className="max-w-screen-lg mx-auto">
-          <h1 className="text-4xl text-center mb-20">1M+ Global Customers</h1>
-
-          <div className="grid md:grid-cols-2 items-center md:gap-8">
-            <Image
-              src="/assets/imgs/dashboard_overview.png"
-              alt="dashboard overview"
-              width={1000}
-              height={1000}
-              fetchPriority="low"
-            />
-            <div>
-              <p className="text-grey mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
-                veritatis corrupti assumenda repudiandae distinctio eum fugit
-                impedit, cum nisi quisquam. Doloribus, cumque! Accusantium quia
-                sequi enim impedit vitae est corporis.
-              </p>
-
-              <h2 className="text-2xl text-dark">Sarah Thompson</h2>
-              <h3 className="text-xl text-dark">CEO Thompson Enterprises</h3>
-
-              <div className="flex justify-end gap-2">
-                <button>
-                  <span className="sr-only">View previous testimony</span>
-                  <ArrowLeftIcon className="w-14 h-14 rounded-full border border-main p-3 text-main hover:cursor-pointer hover:bg-main hover:text-white" />
-                </button>
-                <button>
-                  <span className="sr-only">View next testimony</span>
-                  <ArrowRightIcon className="w-14 h-14 rounded-full border border-main p-3 text-main hover:cursor-pointer hover:bg-main hover:text-white" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <PricingTable />
     </>
   );
 };

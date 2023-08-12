@@ -1,5 +1,6 @@
 import { Logo } from "@/components/atoms/Logo";
 import { NavLink } from "@/components/atoms/NavLink";
+import { links } from "@/constants/navLinks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -16,37 +17,16 @@ const Header = () => {
           </div>
         </Link>
         <div className="flex gap-8 text-white">
-          <NavLink
-            active={pathname === "/how-it-works"}
-            variant="white"
-            href="/how-it-works"
-          >
-            How it works
-          </NavLink>
-          <NavLink
-            active={pathname === "/features"}
-            variant="white"
-            href="/features"
-          >
-            Features
-          </NavLink>
-          <NavLink
-            active={pathname === "/pricing"}
-            variant="white"
-            href="/pricing"
-          >
-            Pricing
-          </NavLink>
-          <NavLink active={pathname === "/about"} variant="white" href="/">
-            About
-          </NavLink>
-          <NavLink
-            active={pathname === "/testimonials"}
-            variant="white"
-            href="/testimonials"
-          >
-            Testimonials
-          </NavLink>
+          {links.map((link, idx) => (
+            <NavLink
+              key={idx}
+              href={link.path}
+              active={pathname === link.path}
+              variant="white"
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
 
         <div className="flex gap-6">

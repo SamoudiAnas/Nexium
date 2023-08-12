@@ -1,3 +1,4 @@
+import { cn } from "@/utils/cn";
 import { VariantProps, cva } from "class-variance-authority";
 import Link, { LinkProps } from "next/link";
 import React from "react";
@@ -16,7 +17,7 @@ const linkVariants = cva(
         dark: "text-dark after:bg-dark",
       },
       active: {
-        true: "after:scale-x-100",
+        true: "after:scale-x-100 after:bg-main",
       },
     },
     defaultVariants: {
@@ -33,7 +34,7 @@ export const NavLink = ({
   ...props
 }: NavLinkProps) => {
   return (
-    <Link className={linkVariants({ variant, active })} {...props}>
+    <Link className={cn(linkVariants({ variant, active }))} {...props}>
       {children}
     </Link>
   );
