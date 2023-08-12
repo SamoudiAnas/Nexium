@@ -13,35 +13,37 @@ export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
   return (
-    <Provider store={store}>
-      <div className="bg-white">
-        <Head>
-          <title>Restaurant Project | Samoudi Anas</title>
-
-          <Script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-REWV2S4TZ3"
-          ></Script>
-          <Script>
-            {` 
+    <>
+      <Head>
+        <title>Restaurant Project | Samoudi Anas</title>
+      </Head>
+      <Script
+        async
+        id="analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-REWV2S4TZ3"
+      ></Script>
+      <Script id="analytics-script">
+        {` 
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-REWV2S4TZ3');
             `}
-          </Script>
-        </Head>
+      </Script>
 
-        {isDashboardLayout(pathname) ? (
-          <DashboardLayout>
-            <Component {...pageProps} />
-          </DashboardLayout>
-        ) : (
-          <CommonLayout>
-            <Component {...pageProps} />
-          </CommonLayout>
-        )}
+      <div className="bg-white">
+        <Provider store={store}>
+          {isDashboardLayout(pathname) ? (
+            <DashboardLayout>
+              <Component {...pageProps} />
+            </DashboardLayout>
+          ) : (
+            <CommonLayout>
+              <Component {...pageProps} />
+            </CommonLayout>
+          )}
+        </Provider>{" "}
       </div>
-    </Provider>
+    </>
   );
 }
