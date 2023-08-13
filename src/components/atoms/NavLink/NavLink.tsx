@@ -5,6 +5,7 @@ import React from "react";
 
 interface NavLinkProps extends LinkProps, VariantProps<typeof linkVariants> {
   children: React.ReactNode;
+  className?: string;
 }
 
 const linkVariants = cva(
@@ -30,11 +31,15 @@ const linkVariants = cva(
 export const NavLink = ({
   variant = "default",
   active,
+  className,
   children,
   ...props
 }: NavLinkProps) => {
   return (
-    <Link className={cn(linkVariants({ variant, active }))} {...props}>
+    <Link
+      className={cn(linkVariants({ variant, active }), className)}
+      {...props}
+    >
       {children}
     </Link>
   );
