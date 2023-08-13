@@ -2,8 +2,8 @@ import Suitecase from "~/assets/svg/suitecase.svg";
 import Partner from "~/assets/svg/partner.svg";
 import CustomerSupport from "~/assets/svg/customer-support.svg";
 
-import PricingTable from "@/scenes/Home/components/PricingTable";
-import FAQs from "@/scenes/Contact/components/FAQs";
+import { PricingTable } from "@/components/templates/PricingTable";
+import { FAQs } from "@/components/templates/FAQs";
 
 export default function Pricing() {
   return (
