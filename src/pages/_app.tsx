@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Restaurant Project | Samoudi Anas</title>
+        <title>Nexium | Samoudi Anas</title>
       </Head>
       <Script
         async

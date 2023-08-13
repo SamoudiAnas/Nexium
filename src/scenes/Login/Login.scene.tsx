@@ -53,8 +53,7 @@ function Login() {
           pathClassName="fill-main"
         />
         <h1 className="text-3xl text-dark text-center mb-12 font-semibold">
-          Welcome To <span className="text-main">Restaurant</span> <br />{" "}
-          Dashboard!
+          Welcome To <span className="text-main">Nexium</span> <br /> Dashboard!
         </h1>
 
         <form onSubmit={handleSubmit(onSubmit)}>
