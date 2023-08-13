@@ -3,6 +3,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import PricingTable from "./components/PricingTable";
 import Image from "next/image";
 import Testimonials from "./components/Testimonials";
+import Link from "next/link";
 
 const LandingPage = () => {
   return (
@@ -17,12 +18,16 @@ const LandingPage = () => {
           </p>
 
           <div className="flex justify-center gap-4 my-8">
-            <Button className="rounded-full px-8" size="lg">
-              Contact Us
-            </Button>
-            <Button variant="outline" className="rounded-full px-8" size="lg">
-              Demo
-            </Button>
+            <Link href="/contact">
+              <Button className="rounded-full px-8" size="lg">
+                Contact Us
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button variant="outline" className="rounded-full px-8" size="lg">
+                Demo
+              </Button>
+            </Link>
           </div>
 
           <Image
@@ -79,19 +84,15 @@ const LandingPage = () => {
               shape a better future for all.
             </p>
             <div className="flex my-8">
-              <Button
-                className="bg-main text-white text-base rounded-full px-8"
-                size="lg"
-              >
-                Contact Us
-              </Button>
-              <Button
-                variant="link"
-                className="text-dark underline underline-offset-2 hover:underline-offset-4 transition-all text-base rounded-full px-8"
-                size="lg"
-              >
-                Demo
-              </Button>
+              <Link href="/login">
+                <Button
+                  variant="link"
+                  className="text-dark underline underline-offset-2 hover:underline-offset-4 transition-all text-base rounded-full px-8"
+                  size="lg"
+                >
+                  Demo
+                </Button>
+              </Link>
             </div>
           </div>
           <Image

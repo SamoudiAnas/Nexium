@@ -8,6 +8,7 @@ import Excellence from "~/assets/svg/excellence.svg";
 import Testimonials from "@/scenes/Home/components/Testimonials";
 import { Button } from "@/components/atoms/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -28,12 +29,16 @@ const About = () => {
           </p>
 
           <div className="flex justify-center gap-4 my-8">
-            <Button className="rounded-full px-8" size="lg">
-              Contact Us
-            </Button>
-            <Button variant="outline" className="rounded-full px-8" size="lg">
-              Demo
-            </Button>
+            <Link href="/contact">
+              <Button className="rounded-full px-8" size="lg">
+                Contact Us
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button variant="outline" className="rounded-full px-8" size="lg">
+                Demo
+              </Button>
+            </Link>
           </div>
 
           <Image
