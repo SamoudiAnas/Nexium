@@ -9,7 +9,7 @@ import {
 } from "@/components/molecules/Tooltip";
 import { CheckIcon, Cross2Icon } from "@radix-ui/react-icons";
 
-export default function PricingTable() {
+function PricingTable() {
   return (
     <div className="relative overflow-hidden before:absolute before:opacity-50 before:inset-0 before:z-10 before:-translate-y-28 before:bg-contain before:bg-no-repeat before:bg-[url('/assets/svg/hashes.svg')]">
       <div className="max-w-screen-lg mx-auto py-24 relative z-20">
@@ -260,3 +260,5 @@ const Tooltips = () => {
     </>
   );
 };
+
+export { PricingTable };

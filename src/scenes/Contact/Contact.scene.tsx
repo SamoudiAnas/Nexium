@@ -5,7 +5,7 @@ import Partner from "~/assets/svg/partner.svg";
 import CustomerSupport from "~/assets/svg/customer-support.svg";
 
 import { ContactForm } from "./components/ContactForm";
-import FAQs from "./components/FAQs";
+import { FAQs } from "@/components/templates/FAQs";
 
 export default function Contact() {
   return (

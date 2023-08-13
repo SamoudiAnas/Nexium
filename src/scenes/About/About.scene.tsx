@@ -5,8 +5,9 @@ import CustomerCentric from "~/assets/svg/customer-centric.svg";
 import Sustainability from "~/assets/svg/sustainability.svg";
 import Excellence from "~/assets/svg/excellence.svg";
 
-import Testimonials from "@/scenes/Home/components/Testimonials";
+import { Testimonials } from "@/components/templates/Testimonials";
 import { Button } from "@/components/atoms/Button";
+
 import Image from "next/image";
 import Link from "next/link";
 

@@ -36,7 +36,7 @@ const testimonials = [
 const IMG_HEIGHT = 400; //25rem
 const MAX_SLIDE_IDX = testimonials.length - 1;
 
-export default function Testimonials() {
+const Testimonials = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   const nextSlide = () => {
@@ -50,7 +50,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="bg-gray-50 py-20">
+    <section id="testimonials" className="hidden md:block bg-gray-50 py-20">
       <div className="max-w-screen-lg mx-auto grid grid-cols-2 items-center gap-16">
         <div className="overflow-hidden" style={{ height: `${IMG_HEIGHT}px` }}>
           <div
@@ -106,4 +106,6 @@ export default function Testimonials() {
       </div>
     </section>
   );
-}
+};
+
+export { Testimonials };

@@ -1,8 +1,8 @@
+import { PricingTable } from "@/components/templates/PricingTable";
+import { Testimonials } from "@/components/templates/Testimonials";
 import { Button } from "@/components/atoms/Button";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
-import PricingTable from "./components/PricingTable";
+
 import Image from "next/image";
-import Testimonials from "./components/Testimonials";
 import Link from "next/link";
 
 const LandingPage = () => {

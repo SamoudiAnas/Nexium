@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FAQs() {
+function FAQs() {
   return (
     <div>
       <section className="bg-gray-100 py-20">
@@ -43,3 +43,5 @@ export default function FAQs() {
     </div>
   );
 }
+
+export { FAQs };
