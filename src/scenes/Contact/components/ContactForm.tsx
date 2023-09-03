@@ -11,11 +11,13 @@ import { TextArea } from "@/components/atoms/Textarea";
 import { Button } from "@/components/atoms/Button";
 import { useEffect } from "react";
 import { InputError } from "@/components/atoms/InputError";
+import { isDirty } from "zod";
 
 const ContactForm = () => {
   const {
     watch,
     trigger,
+    getFieldState,
     register,
     handleSubmit,
     formState: { errors },
@@ -37,7 +39,7 @@ const ContactForm = () => {
             label="First Name"
             type="text"
             defaultValue=""
-            isValid={!!!errors.firstname && watch("firstname") !== ""}
+            isValid={!!!errors.firstname && getFieldState("firstname").isDirty}
             hasError={!!errors.firstname}
             {...register("firstname")}
           />
@@ -51,7 +53,7 @@ const ContactForm = () => {
             label="Last Name"
             type="text"
             defaultValue=""
-            isValid={!!!errors.lastname && watch("lastname") !== ""}
+            isValid={!!!errors.lastname && getFieldState("lastname").isDirty}
             hasError={!!errors.lastname}
             {...register("lastname")}
           />
@@ -67,7 +69,7 @@ const ContactForm = () => {
             label="Email Address"
             type="email"
             defaultValue=""
-            isValid={!!!errors.email && watch("email") !== ""}
+            isValid={!!!errors.email && getFieldState("email").isDirty}
             hasError={!!errors.email}
             {...register("email")}
           />
@@ -79,7 +81,7 @@ const ContactForm = () => {
             label="Subject"
             type="text"
             defaultValue=""
-            isValid={!!!errors.subject && watch("subject") !== ""}
+            isValid={!!!errors.subject && getFieldState("subject").isDirty}
             hasError={!!errors.subject}
             {...register("subject")}
           />
